@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {constants} from "../Constants";
-import {ServerData} from "../interfaces";
+import {ServerData} from "../Interfaces";
 
 const useGetProductListData = () => {
     const [result, setResult] = useState<ServerData>();

@@ -1,0 +1,31 @@
+.card-container {
+    max-width: 250px;
+    min-width: 200px;
+    margin-bottom: 15px;
+
+    .card {
+        height: 400px;
+    }
+
+    .strikethrough-text {
+        text-decoration: line-through;
+    }
+
+    .card-body {
+        .title-text {
+            font-size: 15px;
+        }
+
+        .bottom-text-container {
+
+        }
+
+        .sale-price-text {
+            font-size: 25px;
+        }
+
+        .button-container {
+            margin-top: -10px;
+        }
+    }
+}

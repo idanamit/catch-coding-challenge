@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import useGetProductListData from "./services/getData.service";
 import ProductListHeading from "./components/product-list-heading/ProductListHeading";
+import ProductCardList from "./components/product-card-list/ProductCardList";
 
 const App: React.FC = () => {
     const service = useGetProductListData();
@@ -11,10 +12,14 @@ const App: React.FC = () => {
             <div className="page-header">
                 Template Project
             </div>
-            {service && service.results &&
-            <div className="heading-container">
-                <ProductListHeading query={service.metadata.query} total={service.metadata.total}
-                                    currPage={service.metadata.page} pages={service.metadata.pages}/>
+            {service && service.metadata && service.results &&
+            <div className="page-content">
+                <div className="heading-container">
+                    <ProductListHeading metadata={service.metadata}/>
+                </div>
+                <div className="product-list-container">
+                    <ProductCardList results={service.results}/>
+                </div>
             </div>
             }
         </div>
