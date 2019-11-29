@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
-import ProductListHeading from "./product-list-heading/ProductListHeading";
 import useGetProductListData from "./services/getData.service";
+import ProductListHeading from "./components/product-list-heading/ProductListHeading";
 
 const App: React.FC = () => {
     const service = useGetProductListData();
