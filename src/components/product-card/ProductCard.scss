@@ -12,12 +12,12 @@
     }
 
     .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
         .title-text {
             font-size: 15px;
-        }
-
-        .bottom-text-container {
-
         }
 
         .sale-price-text {

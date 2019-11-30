@@ -9,7 +9,7 @@ const ProductCardList: React.FC<{
     return (
         <CardDeck>
             {props.results.map((product) => {
-                return <ProductCard product={product}/>
+                return <ProductCard key={product.id} product={product}/>
             })}
         </CardDeck>
 
