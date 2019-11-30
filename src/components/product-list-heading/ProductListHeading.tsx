@@ -1,22 +1,20 @@
 import React from 'react';
 import './ProductListHeading.scss';
+import {Metadata} from '../../Interfaces';
 
 const ProductListHeading: React.FC<{
-    query: string;
-    total: number;
-    currPage: number;
-    pages: number;
+    metadata: Metadata
 }> = (props) => {
     return (
         <div className="product-list-heading">
             <div className="query-text">
-                Showing results for "{props.query}"
+                Showing results for "{props.metadata.query}"
             </div>
             <div className="pages-text">
-                Page {props.currPage} of {props.pages} pages
+                Page {props.metadata.page} of {props.metadata.pages} pages
             </div>
             <div className="count-text">
-                Showing "count" items out of {props.total}
+                Showing "count" items out of {props.metadata.total}
             </div>
         </div>
     )

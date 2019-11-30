@@ -1,6 +1,6 @@
 export interface ServerData {
     metadata: Metadata;
-    results: Results;
+    results: Product[];
 }
 
 export interface Metadata {
@@ -8,10 +8,6 @@ export interface Metadata {
     total: number;
     page: number;
     pages: number;
-}
-
-export interface Results {
-    products: Product[];
 }
 
 export interface Product {

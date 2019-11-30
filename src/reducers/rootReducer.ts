@@ -1,11 +1,18 @@
-import {Action} from "redux";
+import {constants} from "../Constants";
+import {Product} from "../Interfaces";
 
 const initialState = {
     metadata: {},
-    results: []
+    results: [],
+    cartItems: Array<Product>()
 };
 
-function rootReducer(state = initialState, action: Action) {
+function rootReducer(state = initialState, action) {
+    if (action.type === constants.actions.ADD_TO_CART) {
+        return Object.assign({}, state, {
+            cartItems: state.cartItems.concat(action.payload)
+        });
+    }
     return state;
 }
 
