@@ -33,7 +33,7 @@ const ProductCard: React.FC<{
                     <div className="button-container">
                         {props.product.quantityAvailable > 0
                             ? <Button variant="outline-primary" block onClick={addToCart}>Add to Cart</Button>
-                            : <Button variant="outline-secondary" block disabled>Sold Out</Button>
+                            : <Button variant="outline-secondary" block disabled className="disabled">Sold Out</Button>
                         }
                     </div>
                 </Card.Body>
