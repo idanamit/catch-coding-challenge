@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Product} from "../../Interfaces";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -10,6 +10,15 @@ const ProductCard: React.FC<{
     product: Product
 }> = (props) => {
     const dispatch = useDispatch();
+    const [isMouseHover, setMouseHover] = useState(false);
+
+    const mouseEnter = () => {
+        setMouseHover(true);
+    };
+
+    const mouseLeave = () => {
+        setMouseHover(false);
+    };
 
     const addToCart = () => {
         dispatch({
@@ -19,10 +28,17 @@ const ProductCard: React.FC<{
     };
 
     return (
-        <div className="card-container">
+        <div className="card-container" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
             <Card>
                 <Card.Img variant="top" src={props.product.imageUrl}/>
                 <Card.Body>
+                    <div className="button-container">
+                        {props.product.quantityAvailable > 0
+                            ? isMouseHover ?
+                                <Button variant="outline-primary" block onClick={addToCart}>Add to Cart</Button> : null
+                            : <Button variant="outline-secondary" block disabled>Sold Out</Button>
+                        }
+                    </div>
                     <Card.Title className="title-text">{props.product.name}</Card.Title>
                     {props.product.retailPrice !== 0 &&
                     <div className="strikethrough-text">
@@ -30,12 +46,6 @@ const ProductCard: React.FC<{
                     </div>
                     }
                     <Card.Text className="sale-price-text">{props.product.salePrice / 100 + "$"}</Card.Text>
-                    <div className="button-container">
-                        {props.product.quantityAvailable > 0
-                            ? <Button variant="outline-primary" block onClick={addToCart}>Add to Cart</Button>
-                            : <Button variant="outline-secondary" block disabled className="disabled">Sold Out</Button>
-                        }
-                    </div>
                 </Card.Body>
             </Card>
         </div>
