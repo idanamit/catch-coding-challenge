@@ -3,6 +3,7 @@ import './App.scss';
 import useGetProductListData from "./services/getData.service";
 import ProductListHeading from "./components/product-list-heading/ProductListHeading";
 import ProductCardList from "./components/product-card-list/ProductCardList";
+import ShoppingCart from "./components/shopping-cart/ShoppingCart";
 
 const App: React.FC = () => {
     const service = useGetProductListData();
@@ -19,6 +20,9 @@ const App: React.FC = () => {
                 </div>
                 <div className="product-list-container">
                     <ProductCardList results={service.results}/>
+                </div>
+                <div className="shopping-cart-container">
+                    <ShoppingCart/>
                 </div>
             </div>
             }

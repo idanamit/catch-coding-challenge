@@ -10,11 +10,14 @@
     }
 
     .page-content {
-        margin: 0 100px 0 100px;
+        margin: 0 10px 0 30px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .heading-container {
         text-align: start;
+        flex-grow:2
     }
 
     .product-list-container {
@@ -22,7 +25,13 @@
         border: 1px solid rgba(0,0,0,.125);
         border-radius: .25rem;
         padding: 5px;
-        width: calc(100% - 220px)
+        width: calc(100% - 380px);
+        margin-right: 10px;
+    }
+
+    .shopping-cart-container {
+        flex-grow: 1;
+        margin-top: 20px;
     }
 }
 

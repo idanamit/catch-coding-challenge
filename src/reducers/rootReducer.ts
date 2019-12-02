@@ -1,10 +1,10 @@
 import {constants} from "../Constants";
-import {Product} from "../Interfaces";
+import {CartProduct} from "../Interfaces";
 
 const initialState = {
     metadata: {},
     results: [],
-    cartItems: Array<Product>()
+    cartItems: Array<CartProduct>()
 };
 
 function rootReducer(state = initialState, action) {

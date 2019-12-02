@@ -1,0 +1,38 @@
+.shopping-cart {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+
+    .shopping-cart-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .shopping-cart-product-list {
+        display: flex;
+        flex-direction: column;
+        margin: 0 35px;
+
+        .cart-product-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .cart-product-name {
+                overflow-wrap: break-word;
+                overflow: hidden;
+                width: 210px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    .total-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+}

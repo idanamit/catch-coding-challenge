@@ -18,3 +18,9 @@ export interface Product {
     imageUrl: string;
     quantityAvailable: number;
 }
+
+export interface CartProduct {
+    id: string;
+    name: string;
+    price: number;
+}
