@@ -1,11 +1,14 @@
 import React from "react";
 import {useSelector} from "react-redux";
 import './ShoppingCart.scss'
-import {uniqBy} from 'lodash';
+import {countBy, uniqBy} from 'lodash';
+import ShoppingCartItem from "../ShoppingCartItem/ShoppingCartItem";
 
 const ShoppingCart: React.FC<{}> = () => {
 
     const productsInCart = useSelector((state: any) => state.cartItems);
+
+    const productsQuantity = countBy(productsInCart, 'id');
 
     const getProductTotalValue = () => {
         let totalValue = 0;
@@ -29,14 +32,9 @@ const ShoppingCart: React.FC<{}> = () => {
                     <div>You have no items in your cart</div>
                     : <div>
                         {getUniqueProductArray(productsInCart).map((product) => {
-                            return <div className="cart-product-container" key={product.id}>
-                                <div className="cart-product-name">{product.name}</div>
-                                <div className="cart-product-price">{product.price / 100 + "$"}</div>
-                            </div>
-
+                            return <ShoppingCartItem product={product} amount={productsQuantity[product.id]}/>
                         })
                         }
-
                         <div className="total-container">
                             <div className="total-title">Total</div>
                             <div className="total-value">{getProductTotalValue() / 100 + "$"}</div>
