@@ -2,7 +2,7 @@ import React from "react";
 import {useSelector} from "react-redux";
 import './ShoppingCart.scss'
 import {countBy, uniqBy} from 'lodash';
-import ShoppingCartItem from "../ShoppingCartItem/ShoppingCartItem";
+import ShoppingCartItem from "../shopping-cart-item/ShoppingCartItem";
 
 const ShoppingCart: React.FC<{}> = () => {
 

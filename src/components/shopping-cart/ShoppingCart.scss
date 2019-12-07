@@ -12,20 +12,6 @@
         display: flex;
         flex-direction: column;
         margin: 0 35px;
-
-        .cart-product-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-            .cart-product-name {
-                overflow-wrap: break-word;
-                overflow: hidden;
-                width: 210px;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-            }
-        }
     }
 
     .total-container {
