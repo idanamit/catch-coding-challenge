@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Product} from "../../Interfaces";
+import {CartProduct, Product} from "../../Interfaces";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import './ProductCard.scss';
@@ -21,9 +21,14 @@ const ProductCard: React.FC<{
     };
 
     const addToCart = () => {
+        const cartProduct: CartProduct = {
+            id: props.product.id,
+            name: props.product.name,
+            price: props.product.salePrice
+        };
         dispatch({
             type: constants.actions.ADD_TO_CART,
-            payload: props.product
+            payload: cartProduct
         })
     };
 

@@ -7,8 +7,12 @@ import {Provider} from 'react-redux'
 import {createStore} from "redux";
 import rootReducer from "./reducers/rootReducer";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
 const store = createStore(rootReducer);
+
+library.add(fas);
 
 ReactDOM.render(
     <Provider store={store}>
