@@ -32,7 +32,7 @@ const ShoppingCart: React.FC<{}> = () => {
                     <div>You have no items in your cart</div>
                     : <div>
                         {getUniqueProductArray(productsInCart).map((product) => {
-                            return <ShoppingCartItem product={product} amount={productsQuantity[product.id]}/>
+                            return <ShoppingCartItem key={product.id} product={product} amount={productsQuantity[product.id]}/>
                         })
                         }
                         <div className="total-container">
