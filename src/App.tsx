@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import useGetProductListData from "./services/getData.service";
+import useGetProductListData from "./services/GetData.service";
 import ProductListHeading from "./components/product-list-heading/ProductListHeading";
 import ProductCardList from "./components/product-card-list/ProductCardList";
 import ShoppingCart from "./components/shopping-cart/ShoppingCart";
