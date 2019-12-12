@@ -1,44 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Catch-Coding-Challenge
 
-## Available Scripts
+## Contact Details
+Name: **Idan Amit**
 
-In the project directory, you can run:
+Email Address: **idanamit4@gmail.com**
 
-### `npm start`
+Phone Number: **(+61)423235956**
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Decision Making
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+As this being my first ever project to start from scratch in react I've used  [Create React App](https://github.com/facebook/create-react-app)
+To setup my project.
 
-### `npm test`
+First I've started writing the layout of the project by creating the main component.
+Part of this was also to add the first call to the API in order to start using the data
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After finishing with layout I've added Redux to the project.
 
-### `npm run build`
+Being done developing all the components I've started writing tests.
+Usually I'm trying to use TDD/BDD as much as I can but as using React/Redux for the first time i've wanted to make sure I'm doing everything right.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For testing framework I've chose Jest and Enzyme.
+Jest being something I've worked with before and also it's recommended by React creators(Facebook).
+Enzyme was also recommended online for being an easy tool for lazy/full rendering of react component that benefited my tests and was easy to use.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Bootstrap Instructions
 
-### `npm run eject`
+before trying to start the project use `npm install` from the main directory.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+in order to start the project building use `npm run` then navigate to `http://localhost:3000` to view the project.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+in order to run the test suits use `npm test`.
