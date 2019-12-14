@@ -4,6 +4,7 @@ import {Metadata} from '../../Interfaces';
 
 const ProductListHeading: React.FC<{
     metadata: Metadata
+    countItems: number
 }> = (props) => {
     return (
         <div className="product-list-heading">
@@ -14,7 +15,7 @@ const ProductListHeading: React.FC<{
                 Page {props.metadata.page} of {props.metadata.pages} pages
             </div>
             <div className="count-text">
-                Showing "count" items out of {props.metadata.total}
+                Showing {props.countItems} items out of {props.metadata.total}
             </div>
         </div>
     )
