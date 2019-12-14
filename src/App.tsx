@@ -11,7 +11,7 @@ const App: React.FC = () => {
     HeaderFunctions();
 
     return (
-        <div className="App">
+        <div className="app">
             <div className="page-header" id="page-header">
                 Catch Coding Challenge
             </div>

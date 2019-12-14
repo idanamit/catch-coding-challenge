@@ -6,17 +6,16 @@ import CardDeck from "react-bootstrap/CardDeck";
 import {Product} from "../../Interfaces";
 import ProductCard from "../product-card/ProductCard";
 
+const testProduct: Product = {
+    id: 'testProductId',
+    name: 'testProductName',
+    salePrice: 1000,
+    retailPrice: 2000,
+    imageUrl: 'testProductUrl',
+    quantityAvailable: 20
+};
+
 describe('ProductCardList Component', () => {
-
-    const testProduct: Product = {
-        id: 'testProductId',
-        name: 'testProductName',
-        salePrice: 1000,
-        retailPrice: 2000,
-        imageUrl: 'testProductUrl',
-        quantityAvailable: 20
-    };
-
     it('should render without throwing an error', () => {
         expect(shallow(<ProductCardList results={[]}/>).contains(<CardDeck></CardDeck>)).toBeTruthy();
     });

@@ -12,15 +12,17 @@ const testMetadata: Metadata = {
     pages: 5
 };
 
+const testCountItems = 10;
+
 describe('ProductListHeading Component', () => {
     it('should render the component wrapper element', () => {
-        const wrapper = shallow(<ProductListHeading metadata={testMetadata}/>);
+        const wrapper = shallow(<ProductListHeading metadata={testMetadata} countItems={testCountItems}/>);
 
         expect(wrapper.hasClass("product-list-heading")).toBeTruthy();
     });
 
     it('should render the metadata in the component', () => {
-        const wrapper = shallow(<ProductListHeading metadata={testMetadata}/>);
+        const wrapper = shallow(<ProductListHeading metadata={testMetadata} countItems={testCountItems}/>);
 
         expect(wrapper.contains(<div className="query-text">Showing results for
             "{testMetadata.query}"</div>)).toBeTruthy();
@@ -29,6 +31,6 @@ describe('ProductListHeading Component', () => {
             Page {testMetadata.page} of {testMetadata.pages} pages</div>)).toBeTruthy();
 
         expect(wrapper.contains(<div className="count-text">
-            Showing "count" items out of {testMetadata.total}</div>)).toBeTruthy();
+            Showing {testCountItems} items out of {testMetadata.total}</div>)).toBeTruthy();
     })
 });
